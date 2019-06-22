@@ -1,0 +1,8 @@
+{
+  "Token": "",
+  "Prefix": "--",
+  "Description": "Hello! I'm Chatto, a fun chat bot for your Discord server!",
+  "Status": "Help: {}help",
+
+  "ChatChannel": "chat"
+}
