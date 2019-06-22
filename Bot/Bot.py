@@ -1,4 +1,8 @@
+# Invite: https://discordapp.com/api/oauth2/authorize?client_id=591950692214636594&permissions=8&scope=bot
+
 import json
+import aiml
+from DavesLogger import Logs
 
 import discord
 from discord.ext import commands
@@ -12,6 +16,9 @@ class Chatto (commands.Bot):
             case_insensitive = True,
             max_messages = 10_000
         )
+
+        self.Kernel = aiml.Kernel ()
+        self.Setup ()
 
     @property
     def Config (self) -> dict:
@@ -30,10 +37,14 @@ class Chatto (commands.Bot):
     def Status (self) -> str:
         return self.Config.get ('Status', 'Help: {}help')
 
+    def Setup (self):
+        self.Kernel.learn ('Data/Startup.xml')
+        self.Kernel.respond ('LOAD AIML B')
+
     def LoadExtensions (self, _Path: str = '', _Extensions: list = [], _Suffix: str = '') -> None:
         for Extension in _Extensions:
             Name = Extension.split ('.')[-1]
-            Extension = f'{_Folder}.{Extension}{_Suffix}'
+            Extension = f'{_Path}.{Extension}{_Suffix}'
 
             try:
                 self.load_extension (Extension)

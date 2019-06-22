@@ -1,0 +1,33 @@
+<aiml version = '1.0'>
+  <category>
+    <pattern> HELLO </pattern>
+    <template>
+      <random>
+        <li>Hi! :grinning:</li>
+        <li>Hello there :smile:</li>
+        <li>Hey!</li>
+      </random>
+    </template>
+  </category>
+
+  <category>
+    <pattern> WHAT ARE YOU </pattern>
+    <template>I'm a Discord chatbot, made to bring joy!</template>
+  </category>
+
+  <category>
+    <pattern> WHO ARE YOU </pattern>
+    <template>I'm Chatto, silly! :joy:</template>
+  </category>
+
+  <category>
+    <pattern> ONE TIME I * </pattern>
+    <template>
+      <random>
+        <li>Go on.</li>
+        <li>I didn't know that :open_mouth:</li>
+        <li>Are you telling the truth? :thinking:</li>
+      </random>
+    </template>
+  </category>
+</aiml>

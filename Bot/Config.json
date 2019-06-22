@@ -4,5 +4,12 @@
   "Description": "Hello! I'm Chatto, a fun chat bot for your Discord server!",
   "Status": "Help: {}help",
 
-  "ChatChannel": "chat"
+  "ChatChannel": "chat",
+
+  "Commands": [
+    "Setting"
+  ],
+  "Modules": [
+    "Events"
+  ]
 }
